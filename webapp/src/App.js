@@ -6,7 +6,7 @@ import logo from './assets/inko_logo.svg';
 
 const Title = styled.div`
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 const LogoTitle = styled.img`

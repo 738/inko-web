@@ -6,11 +6,11 @@ import arrow from '../assets/arrow.svg';
 
 const Container = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 `;
 
-const BeforeTextArea = styled.textarea`
+const TextArea = styled.textarea`
     border-radius: 30px;
     border: 0px;
     width: 480px;
@@ -19,21 +19,11 @@ const BeforeTextArea = styled.textarea`
     padding: 25px;
     font-size: 24px;
     resize: none;
-`;
-
-const AfterTextArea = styled.textarea`
-    border-radius: 30px;
-    border: 0px;
-    width: 480px;
-    height: 300px;
-    background: rgba(255, 251, 217, 0.5);
-    padding: 25px;
-    font-size: 24px;
-    resize: none;
+    margin: 0 20px;
 `;
 
 const Arrow = styled.img`
-
+    margin: 10px;
 `;
 
 class Converter extends React.Component {
@@ -61,9 +51,9 @@ class Converter extends React.Component {
     render() {
         return (
             <Container>
-                <BeforeTextArea value={this.state.beforeTextValue} onChange={this.onBeforeTextValueChanged.bind(this)}/>
+                <TextArea value={this.state.beforeTextValue} onChange={this.onBeforeTextValueChanged.bind(this)}/>
                 <Arrow src={arrow} />
-                <AfterTextArea value={this.state.afterTextValue} disabled/>
+                <TextArea value={this.state.afterTextValue} disabled/>
             </Container>
         );
     }
