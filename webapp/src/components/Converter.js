@@ -9,10 +9,14 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `;
 
 const TextAreaContainer = styled.div`
     position: relative;
+    display: inline-block;
 `;
 
 const TextArea = styled.textarea`
@@ -27,10 +31,19 @@ const TextArea = styled.textarea`
     margin: 0 20px;
     outline: none;
     box-shadow: 0 50px 80px rgba(0, 0, 0, 0.1); 
+    @media (max-width: 700px) {
+        width: 80%;
+        height: 200px;
+        margin: 0;
+    }
 `;
 
 const Arrow = styled.img`
     margin: 10px;
+    @media (max-width: 700px) {
+        transform: rotate(90deg);
+        height: 40px;
+    }
 `;
 
 const Erase = styled.img`
@@ -39,6 +52,9 @@ const Erase = styled.img`
     top: 10px;
     right: 30px;
     cursor: pointer;
+    @media (max-width: 700px) {
+        right: 5px;
+    }
 `;
 
 class Converter extends React.Component {

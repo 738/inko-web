@@ -12,6 +12,10 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 700px) {
+        position: relative;
+        height: 40px;
+    }
 `;
 
 const Logo = styled.div`
@@ -23,15 +27,25 @@ const Logo = styled.div`
 const LogoImage = styled.img`
     height: 60px;
     margin: 10px 20px;
+    @media (max-width: 700px) {
+        height: 30px;
+        margin: 5px 10px;
+    }
 `;
 
 const LogoWording = styled.img`
     height: 35px;
+    @media (max-width: 700px) {
+        height: 20px;
+    }
 `;
 
 const Github = styled.img`
     height: 20px;
     margin-right: 20px;
+    @media (max-width: 700px) {
+        margin-right: 10px;
+    }
 `
 
 class Header extends React.Component {

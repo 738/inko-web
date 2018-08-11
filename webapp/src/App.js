@@ -13,6 +13,9 @@ const LogoTitle = styled.img`
   margin-top: 30px;
   margin-bottom: 20px;
   height: 160px;
+  @media (max-width: 700px) {
+    margin-top: 10px;
+  }
 `;
 
 const Subtitle = styled.div`
