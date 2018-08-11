@@ -37,15 +37,13 @@ const Github = styled.img`
 class Header extends React.Component {
     render() {
         return (
-            <div>
-                <Container>
-                    <Logo>
-                        <LogoImage src={logo_bird} />
-                        <LogoWording src={logo_word} />
-                    </Logo>
-                    <a href="https://github.com/JonJee/inko" target="_blank"><Github src={github_logo} /></a>
-                </Container>
-            </div>
+            <Container>
+                <Logo>
+                    <LogoImage src={logo_bird} />
+                    <LogoWording src={logo_word} />
+                </Logo>
+                <a href="https://github.com/JonJee/inko" target="_blank"><Github src={github_logo} /></a>
+            </Container>
         );
     }
 }

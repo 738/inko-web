@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
+import Converter from './components/Converter';
 import logo from './assets/inko_logo.svg';
 
 const Title = styled.div`
   text-align: center;
+  margin-bottom: 30px;
 `;
 
 const LogoTitle = styled.img`
-  margin-top: 110px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  height: 220px;
+  height: 160px;
 `;
 
 const Subtitle = styled.div`
@@ -35,6 +37,7 @@ class App extends Component {
           <Subtitle>{subtitle}</Subtitle>
           <Description>{description}</Description>
         </Title>
+        <Converter />
       </div>
     );
   }
