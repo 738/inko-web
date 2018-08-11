@@ -35,6 +35,7 @@ const TextArea = styled.textarea`
         width: 80%;
         height: 200px;
         margin: 0;
+
     }
 `;
 
@@ -43,6 +44,7 @@ const Arrow = styled.img`
     @media (max-width: 700px) {
         transform: rotate(90deg);
         height: 40px;
+        margin: 25px;
     }
 `;
 
@@ -53,7 +55,7 @@ const Erase = styled.img`
     right: 30px;
     cursor: pointer;
     @media (max-width: 700px) {
-        right: 5px;
+        right: 0px;
     }
 `;
 
@@ -94,7 +96,7 @@ class Converter extends React.Component {
                 </TextAreaContainer>
                 <Arrow src={arrow} />
                 <TextAreaContainer>
-                    <TextArea value={this.state.afterTextValue} disabled/>
+                    <TextArea value={this.state.afterTextValue} readOnly/>
                 </TextAreaContainer>
             </Container>
         );
