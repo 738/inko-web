@@ -42,7 +42,7 @@ class Header extends React.Component {
                     <LogoImage src={logo_bird} />
                     <LogoWording src={logo_word} />
                 </Logo>
-                <a href="https://github.com/JonJee/inko" target="_blank"><Github src={github_logo} /></a>
+                <a href="https://github.com/JonJee/inko" target="_blank" rel="noopener noreferrer"><Github src={github_logo} /></a>
             </Container>
         );
     }
