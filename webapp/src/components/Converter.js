@@ -102,13 +102,13 @@ class Converter extends React.Component {
     }
 
     onArrowButtonClicked() {
-        const beforeTextValue = this.state.beforeTextValue;
-        const afterTextValue = this.state.afterTextValue;
+        const value = this.state.afterTextValue;
+        const isEn2koModeToggled = !this.state.isEn2koMode;
         this.setState({
             ...this.state,
-            beforeTextValue: afterTextValue,
-            afterTextValue: beforeTextValue,
-            isEn2koMode: !this.state.isEn2koMode,
+            beforeTextValue: value,
+            afterTextValue: isEn2koModeToggled ? this._inko.en2ko(value) : this._inko.ko2en(value),
+            isEn2koMode: isEn2koModeToggled,
         });
     }
 
