@@ -28,6 +28,15 @@ const H1 = styled.div`
     }
 `;
 
+const H1_2 = styled.div`
+    font-size: 36px;
+    margin: 60px 0px 40px;
+    font-weight: bold;
+    @media (max-width: 700px) {
+        font-size: 32px;
+    }
+`;
+
 const H2 = styled.div`
     color: #212121;
     font-size: 28px;
@@ -76,8 +85,9 @@ class Readme extends React.Component {
             <Container>
                 <Contents >
                     <H1>Getting Started</H1>
-                    <P>영타를 한글로 쳤을 때, 혹은 한타를 영어로 변환해주는 기능을 가진 자바스크립트 오픈소스 라이브러리입니다.</P>
 
+                    <H1_2>inko.js</H1_2>
+                    <P>inko.js는 영타를 한글로 쳤을 때, 혹은 한타를 영어로 변환해주는 기능을 가진 자바스크립트 오픈소스 라이브러리입니다.</P>
                     <H2>Installation</H2>
 
                     <H3>npm</H3>
@@ -109,27 +119,55 @@ class Readme extends React.Component {
                     <H2>Usage</H2>
 
                     <Pre className={classNames('prettyprint', 'lang-js')}>
-                        var Inko = require('inko');<br/>
+                        var Inko = require('inko');<br />
                         var inko = Inko();
                     </Pre>
 
                     <H3>영어 → 한글</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-js')}>
-                        inko.en2ko('dkssudgktpdy tptkd!');<br/>
+                        inko.en2ko('dkssudgktpdy tptkd!');<br />
                         // 안녕하세요 세상!
                     </Pre>
 
                     <H3>한글 → 영어</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-js')}>
-                        inko.ko2en('ㅗ디ㅣㅐ 재깅!');<br/>
+                        inko.ko2en('ㅗ디ㅣㅐ 재깅!');<br />
                         // hello world!
                     </Pre>
 
-                    <H2>Dependent tools</H2>
+                    {/* <H2>Dependent tools</H2>
 
-                    <P><A href="https://github.com/JonJee/inko-cli" target="_blank" rel="noopener noreferrer">Inko CLI</A> - Use Inko on the command line.</P>
+                    <P><A href="https://github.com/JonJee/inko-cli" target="_blank" rel="noopener noreferrer">Inko CLI</A> - Use Inko on the command line.</P> */}
+
+                    <H1_2>inko-cli</H1_2>
+
+                    <P>inko-cli는 터미널에서 inko를 쉽게 쓰도록 해주는 커맨드라인 인터페이스 모듈입니다.</P>
+
+                    <H2>Installation</H2>
+
+                    <H3>npm</H3>
+
+                    <Pre className={classNames('prettyprint', 'lang-bsh')}>
+                        npm install -g inko-cli
+                    </Pre>
+
+                    <H2>Usage</H2>
+
+                    <H3>영어 → 한글</H3>
+
+                    <Pre className={classNames('prettyprint', 'lang-bsh')}>
+                        $ inko -k "dkssudgktpdy ggg"<br/>
+                        안녕하세요 ㅎㅎㅎ
+                    </Pre>
+
+                    <H3>한글 → 영어</H3>
+
+                    <Pre className={classNames('prettyprint', 'lang-bsh')}>
+                        $ inko -e "ㅗ디ㅣㅐ 재깅!"<br/>
+                        hello world!
+                    </Pre>
 
                     <H2>Contributing</H2>
 
@@ -137,7 +175,7 @@ class Readme extends React.Component {
 
                     <H2>License</H2>
 
-                    <P>Inko.js is released under the MIT License. See <A href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</A> file for details.</P>
+                    <P>inko.js and inko-cli are released under the MIT License. See <A href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</A> file for details.</P>
                 </Contents>
             </Container>
         );
