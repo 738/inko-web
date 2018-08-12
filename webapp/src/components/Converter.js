@@ -28,9 +28,8 @@ const TextAreaContainer = styled.div`
     margin: 0 20px;
     box-shadow: 0 50px 80px rgba(0, 0, 0, 0.1); 
     @media (max-width: 700px) {
-        width: 80%;
+        width: 70%;
         height: 200px;
-        margin: 0;
     }
 `;
 
@@ -49,12 +48,6 @@ const TextArea = styled.textarea`
     font-size: 20px;
     resize: none;
     outline: none;
-    // @media (max-width: 700px) {
-    //     width: 80%;
-    //     height: 200px;
-    //     margin: 0;
-
-    // }
 `;
 
 const Arrow = styled.img`
@@ -73,9 +66,6 @@ const Erase = styled.img`
     top: 10px;
     right: 10px;
     cursor: pointer;
-    @media (max-width: 700px) {
-        right: 0px;
-    }
 `;
 
 class Converter extends React.Component {
