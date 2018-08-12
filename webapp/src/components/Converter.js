@@ -22,7 +22,7 @@ const TextAreaContainer = styled.div`
     border-radius: 30px;
     border: 0px;
     width: 480px;
-    height: 300px;
+    height: 320px;
     background: rgba(255, 251, 217, 0.5);
     padding: 15px 35px;
     margin: 0 20px;
@@ -35,9 +35,13 @@ const TextAreaContainer = styled.div`
 
 const Label = styled.div`
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
     display: inline-block;
     margin-bottom: 15px;
+    @media (max-width: 700px) {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 `;
 
 const TextArea = styled.textarea`
@@ -48,6 +52,9 @@ const TextArea = styled.textarea`
     font-size: 20px;
     resize: none;
     outline: none;
+    @media (max-width: 700px) {
+        font-size: 16px;
+    }
 `;
 
 const Arrow = styled.img`

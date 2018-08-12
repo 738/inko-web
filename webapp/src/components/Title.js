@@ -7,7 +7,7 @@ const Container = styled.div`
     margin-bottom: 50px;
     @media (max-width: 700px) {
         margin-bottom: 20px;
-      }
+    }
 `;
 
 const LogoTitle = styled.img`
