@@ -26,6 +26,7 @@ const TitleContainer = styled.div`
   background: linear-gradient(rgb(247, 223, 182), rgb(247, 168, 252));
   height: 100%;
   padding-bottom: 80px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 `;
 
 class App extends Component {
