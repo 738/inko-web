@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
+import badge_download from '../assets/badge_download.svg';
 
 const Container = styled.div`
     padding-top: 50px;
@@ -69,6 +70,18 @@ const A = styled.a`
     font-weight: bold;
 `;
 
+const BadgeContainer = styled.div`
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
+
+const Badge = styled.img`
+    height: 26px;
+    margin: 0 20px 40px;
+`;
+
 const Pre = styled.pre`
     font-size: 16px;
     overflow: auto;
@@ -83,7 +96,20 @@ class Readme extends React.Component {
     render() {
         return (
             <Container>
-                <Contents >
+                <Contents>
+                    <BadgeContainer>
+                        <Badge src="https://img.shields.io/teamcity/codebetter/bt428.svg" />
+                        <a href="https://github.com/jonjee/inko" target="_blank" rel="noopener noreferrer">
+                            <Badge src={`https://img.shields.io/github/stars/jonjee/inko.svg?style=social&label=Stars`} />
+                        </a>
+                        <a href="https://npmjs.com/package/inko" target="_blank" rel="noopener noreferrer">
+                            <Badge src="https://img.shields.io/npm/v/inko.svg" alt="version" />
+                        </a>
+                        <Badge src={badge_download} />
+                        <a href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+                            <Badge src="https://img.shields.io/github/license/jonjee/inko.svg" />
+                        </a>
+                    </BadgeContainer>
                     <H1>Getting Started</H1>
 
                     <H1_2>inko.js</H1_2>
