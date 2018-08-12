@@ -10,12 +10,15 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     @media (max-width: 700px) {
-        
+        padding-top: 20px;
     }
 `;
 
 const Contents = styled.div`
-    width: 75%;
+    width: 55%;
+    @media (max-width: 700px) {
+        width: 90%;
+    }
 `;
 
 const H1 = styled.div`
@@ -24,7 +27,7 @@ const H1 = styled.div`
     margin: 40px 0px;
     font-family: 'Anton', sans-serif;
     @media (max-width: 700px) {
-        font-size: 38px;
+        font-size: 32px;
     }
 `;
 
@@ -33,16 +36,16 @@ const H2 = styled.div`
     font-size: 28px;
     margin: 30px 0px;
     @media (max-width: 700px) {
-        font-size: 30px;
+        font-size: 24px;
     }
 `;
 
 const H3 = styled.div`
     color: #212121;
-    font-size: 20px;
+    font-size: 22px;
     margin: 30px 0px;
     @media (max-width: 700px) {
-        font-size: 22px;
+        font-size: 18px;
     }
 `;
 
@@ -50,7 +53,7 @@ const P = styled.div`
     font-size: 18px;
     margin: 20px 0px;
     @media (max-width: 700px) {
-        font-size: 14px;
+        font-size: 16px;
     }
 `;
 
@@ -58,10 +61,16 @@ const A = styled.a`
     text-decoration: none;
     color: #EF53F9;
     font-weight: bold;
-`
+`;
 
 const Pre = styled.pre`
     font-size: 16px;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    @media (max-width: 700px) {
+        font-size: 12px;
+    }
 `;
 
 class Readme extends React.Component {
@@ -74,19 +83,19 @@ class Readme extends React.Component {
 
                     <H2>Installation</H2>
 
-                    <H3 id="npm">npm</H3>
+                    <H3>npm</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-bsh')}>
                         npm install inko
                     </Pre>
 
-                    <H3 id="yarn">yarn</H3>
+                    <H3>yarn</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-bsh')}>
                         yarn add inko
                     </Pre>
 
-                    <H3 id="asbrowsermodule">As Browser module</H3>
+                    <H3>As Browser module</H3>
 
                     <P>CDN</P>
 
@@ -100,7 +109,7 @@ class Readme extends React.Component {
                         bower install inko
                     </Pre>
 
-                    <H2 id="howtouse">Usage</H2>
+                    <H2>Usage</H2>
 
                     <Pre className={classNames('prettyprint', 'lang-js')}>
                         var Inko = require('inko');<br/>
@@ -125,11 +134,11 @@ class Readme extends React.Component {
 
                     <P><A href="https://github.com/JonJee/inko-cli" target="_blank" rel="noopener noreferrer">Inko CLI</A> - Use Inko on the command line.</P>
 
-                    <H2 id="howtocontribute">Contributing</H2>
+                    <H2>Contributing</H2>
 
                     <P>이 오픈소스 프로젝트에 누구나 기여할 수 있습니다. 기여하고 싶은 분들은 이 레포지토리를 포크한 후 풀리퀘스트 요청해주세요!</P>
 
-                    <H2 id="license">License</H2>
+                    <H2>License</H2>
 
                     <P>Inko.js is released under the MIT License. See <A href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</A> file for details.</P>
                 </Contents>

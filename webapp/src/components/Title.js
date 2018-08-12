@@ -26,7 +26,7 @@ const Subtitle = styled.div`
   font-weight: bold;
   margin: 0px 10px;
   @media (max-width: 700px) {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
   }
 `;
@@ -35,7 +35,7 @@ const Description = styled.div`
   font-size: 20px;
   margin: 0px 10px;
   @media (max-width: 700px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 `;
 
