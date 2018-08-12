@@ -3,11 +3,11 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: linear-gradient(rgb(247, 223, 182), rgb(247, 168, 252));
-  height: 1000px;
+  height: 120%;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   body {
     height: 1200px;
   }
-}
+} */
