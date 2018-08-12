@@ -21,10 +21,12 @@ const LogoTitle = styled.img`
 const Subtitle = styled.div`
   font-size: 24px;
   font-weight: bold;
+  margin: 0px 10px;
 `;
 
 const Description = styled.div`
   font-size: 20px;
+  margin: 0px 10px;
 `;
 
 const subtitle = "English into Korea Converter Opensource library";
