@@ -55,7 +55,7 @@ const Arrow = styled.img`
     cursor: pointer;
     @media (max-width: 700px) {
         transform: rotate(90deg);
-        height: 40px;
+        height: 30px;
         margin: 25px;
     }
 `;
@@ -68,12 +68,17 @@ const Erase = styled.img`
     cursor: pointer;
 `;
 
+const DEFAULT_ENGLISH = 'dkssudgktpdy!';
+const DEFAULT_KOREAN = '안녕하세요!';
+const ENGLISH = '영어';
+const KOREAN = '한글';
+
 class Converter extends React.Component {
     constructor() {
         super();
         this.state = {
-            beforeTextValue: 'dkssudgktpdy!',
-            afterTextValue: '안녕하세요!',
+            beforeTextValue: DEFAULT_ENGLISH,
+            afterTextValue: DEFAULT_KOREAN,
             isEn2koMode: true,
         }
         this._inko = new Inko();
@@ -111,13 +116,13 @@ class Converter extends React.Component {
         return (
             <Container>
                 <TextAreaContainer>
-                    <Label>{ this.state.isEn2koMode ? '영어' : '한글' }</Label>
+                    <Label>{ this.state.isEn2koMode ? ENGLISH : KOREAN }</Label>
                     <TextArea value={this.state.beforeTextValue} onChange={this.onBeforeTextValueChanged.bind(this)} />
                     <Erase src={erase} onClick={this.onEraseButtonClicked.bind(this)} />
                 </TextAreaContainer>
                 <Arrow src={arrow} onClick={this.onArrowButtonClicked.bind(this)}/>
                 <TextAreaContainer>
-                    <Label>{ this.state.isEn2koMode ? '한글' : '영어' }</Label>
+                    <Label>{ this.state.isEn2koMode ? KOREAN : ENGLISH }</Label>
                     <TextArea value={this.state.afterTextValue} readOnly/>
                 </TextAreaContainer>
             </Container>
