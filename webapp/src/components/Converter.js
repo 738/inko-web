@@ -56,7 +56,7 @@ const Arrow = styled.img`
     @media (max-width: 700px) {
         transform: rotate(90deg);
         height: 30px;
-        margin: 25px;
+        margin: 15px;
     }
 `;
 

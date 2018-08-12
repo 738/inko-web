@@ -26,7 +26,7 @@ const Subtitle = styled.div`
   font-weight: bold;
   margin: 0px 10px;
   @media (max-width: 700px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
   }
 `;
@@ -35,20 +35,17 @@ const Description = styled.div`
   font-size: 20px;
   margin: 0px 10px;
   @media (max-width: 700px) {
-    font-size: 14px;
+    font-size: 10px;
   }
 `;
-
-const SUBTITLE = "English into Korea Converter Opensource library";
-const DESCRIPTION = "It converts mistakenly misspelled english letters into korean or conversely";
 
 class Title extends React.Component {
     render() {
         return (
             <Container>
                 <LogoTitle src={logo} />
-                <Subtitle>{SUBTITLE}</Subtitle>
-                <Description>{DESCRIPTION}</Description>
+                <Subtitle>{this.props.subtitle}</Subtitle>
+                <Description>{this.props.description}</Description>
             </Container>
         );
     }
