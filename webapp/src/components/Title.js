@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../assets/inko_logo.svg';
+import logo from '../assets/inko_logo.png';
 
 const Container = styled.div`
     text-align: center;

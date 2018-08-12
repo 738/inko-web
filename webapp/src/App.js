@@ -16,7 +16,7 @@ injectGlobal`
     background: white;
     font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
   }
-`
+`;
 
 const Container = styled.div`
   

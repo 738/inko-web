@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
-import hljs from 'highlight.js';
-import javascript from 'highlight.js/lib/languages/javascript';
-hljs.registerLanguage('javascript', javascript);
 
 const Container = styled.div`
     padding-top: 50px;

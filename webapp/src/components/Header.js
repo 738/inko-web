@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo_bird from '../assets/inko_logo_bird.svg';
-import logo_word from '../assets/inko_logo_word.svg';
+import logo_bird from '../assets/inko_logo_bird.png';
+import logo_word from '../assets/inko_logo_word.png';
 import github_logo from '../assets/github_logo.svg';
 
 const Container = styled.div`
