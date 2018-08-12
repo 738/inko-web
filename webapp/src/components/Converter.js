@@ -69,12 +69,11 @@ const Erase = styled.img`
 `;
 
 class Converter extends React.Component {
-
     constructor() {
         super();
         this.state = {
-            beforeTextValue: 'dkssudgktpdy! dldRHsms duddj ↔ gksrmf qusghks dhvmsthtm fkdlqmfjfldlqslek.\n\ndurltj xptmxmgoqhtpdy!',
-            afterTextValue: '안녕하세요! 잉꼬는 영어 ↔ 한글 변환 오픈소스 라이브러리입니다.\n\n여기서 테스트해보세요!',
+            beforeTextValue: 'dkssudgktpdy!',
+            afterTextValue: '안녕하세요!',
             isEn2koMode: true,
         }
         this._inko = new Inko();
@@ -112,13 +111,13 @@ class Converter extends React.Component {
         return (
             <Container>
                 <TextAreaContainer>
-                    <Label>{this.state.isEn2koMode ? "영어" : "한글"}</Label>
+                    <Label>{ this.state.isEn2koMode ? '영어' : '한글' }</Label>
                     <TextArea value={this.state.beforeTextValue} onChange={this.onBeforeTextValueChanged.bind(this)} />
                     <Erase src={erase} onClick={this.onEraseButtonClicked.bind(this)} />
                 </TextAreaContainer>
                 <Arrow src={arrow} onClick={this.onArrowButtonClicked.bind(this)}/>
                 <TextAreaContainer>
-                    <Label>{this.state.isEn2koMode ? "한글" : "영어"}</Label>
+                    <Label>{ this.state.isEn2koMode ? '한글' : '영어' }</Label>
                     <TextArea value={this.state.afterTextValue} readOnly/>
                 </TextAreaContainer>
             </Container>
