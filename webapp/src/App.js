@@ -6,8 +6,8 @@ import Converter from './components/Converter';
 import Readme from './components/Readme';
 import Footer from './components/Footer';
 
-const SUBTITLE = "English into Korea Converter Opensource library";
-const DESCRIPTION = "It converts mistakenly misspelled english letters into korean or conversely";
+const SUBTITLE = "Open Source Library, Converting Misspelled English characters into Korean letters (& vice versa)";
+const DESCRIPTION = "It supports Javascript and Command Line Interface (Python is under development)";
 
 injectGlobal`
   body {
