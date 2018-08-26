@@ -133,7 +133,7 @@ class Readme extends React.Component {
                     <P>CDN</P>
 
                     <Pre className={classNames('prettyprint', 'lang-html')}>
-                        &lt;script src="https://cdn.jsdelivr.net/npm/inko@1.0.5/inko.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="https://cdn.jsdelivr.net/npm/inko@1.0.6/inko.min.js"&gt;&lt;/script&gt;
                     </Pre>
 
                     <P>Bower</P>
@@ -162,10 +162,6 @@ class Readme extends React.Component {
                         inko.ko2en('ㅗ디ㅣㅐ 재깅!');<br />
                         // hello world!
                     </Pre>
-
-                    {/* <H2>Dependent tools</H2>
-
-                    <P><A href="https://github.com/JonJee/inko-cli" target="_blank" rel="noopener noreferrer">Inko CLI</A> - Use Inko on the command line.</P> */}
 
                     <H1_2>inko-cli</H1_2>
 
