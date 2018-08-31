@@ -1,28 +1,10 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const easeIn = keyframes`
-  0% {
-    bottom: -50px;
-  }
-
-  100% {
-    bottom: 0px;
-  }
-`;
-
-const easeOut = keyframes`
-  0% {
-    bottom: 0px;
-  }
-
-  100% {
-    bottom: -50px;
-  }
-`;
+const TOAST_HEIGHT = 45;
 
 const ContainerView = styled.div`
-    height: 50px;
+    height: ${TOAST_HEIGHT}px;
     width: 300px;
     background-color: rgba(219, 53, 147, 0.85);
     border-radius: 20px 20px 0 0;
@@ -33,7 +15,8 @@ const ContainerView = styled.div`
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    animation: ${props => props.isOpen ? easeOut : easeIn} 0.8s;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
 `;
 
 const Message = styled.div`
@@ -46,38 +29,21 @@ class Toast extends React.Component {
         super(props);
     }
 
-    componentWillMount() {
-        
-    }
-
-    componentDidMount() {
-        
-    }
-
     componentWillReceiveProps(nextProps) {
         console.log(nextProps);
         if (nextProps.isOpen) {
             setTimeout(() => {
                 this.props.onRequestClose && this.props.onRequestClose();
             }, this.props.autoHideDuration || 3000);
-        } else {
-            
         }
-    }
-
-    componentWillUnmount() {
-        console.log('unmount');
     }
 
     render() {
-        if (this.props.isOpen) {
-            return (
-                <ContainerView>
-                    <Message>{this.props.message}</Message>
-                </ContainerView>
-            );
-        }
-        return null;
+        return (
+            <ContainerView style={this.props.isOpen ? {} : { bottom: -TOAST_HEIGHT + 'px', opacity: '0' }}>
+                <Message>{this.props.message}</Message>
+            </ContainerView>
+        );
     }
 
 }
