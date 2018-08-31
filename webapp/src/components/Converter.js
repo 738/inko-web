@@ -141,6 +141,10 @@ class Converter extends React.Component {
     copyToClipboard(text) {
         let textField = document.createElement('textarea');
         textField.innerText = text;
+        // 모바일에서 밑으로 내려가는 현상 때문에
+        textField.style.position = 'fixed';
+        textField.style.top = '0px';
+        textField.style.right = '0px';
         document.body.appendChild(textField);
         textField.select();
         document.execCommand('copy');
