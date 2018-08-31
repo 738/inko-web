@@ -6,6 +6,7 @@ import erase from '../assets/erase.svg';
 import clipboard_copy from '../assets/clipboard_copy.svg';
 import Toast from './Toast';
 import isMobile from 'ismobilejs';
+import queryString from 'query-string';
 
 
 const Container = styled.div`
@@ -96,13 +97,29 @@ const MESSAGE_COPY = 'Copied!';
 class Converter extends React.Component {
     constructor() {
         super();
+        this._inko = new Inko();
+
+        // query string 파싱해서 화면에 뿌림
+        const parsed = queryString.parse(location.search);
+        const englishQuery = parsed.e;
+        const koreanQuery = parsed.k;
+        let beforeTextValue, afterTextValue, isEn2koMode;
+        if (typeof englishQuery !== 'undefined') {
+            isEn2koMode = true;
+            beforeTextValue = englishQuery;
+            afterTextValue = this._inko.en2ko(englishQuery);
+        } else if (typeof koreanQuery !== 'undefined') {
+            isEn2koMode = false;
+            beforeTextValue = koreanQuery;
+            afterTextValue = this._inko.ko2en(koreanQuery);
+        }
+
         this.state = {
-            beforeTextValue: DEFAULT_ENGLISH,
-            afterTextValue: DEFAULT_KOREAN,
-            isEn2koMode: true,
+            beforeTextValue: beforeTextValue || DEFAULT_ENGLISH,
+            afterTextValue: afterTextValue || DEFAULT_KOREAN,
+            isEn2koMode: isEn2koMode || true,
             isToastOpen: false,
         }
-        this._inko = new Inko();
     }
 
     onBeforeTextValueChanged(e) {
