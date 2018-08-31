@@ -30,7 +30,6 @@ class Toast extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         if (nextProps.isOpen) {
             setTimeout(() => {
                 this.props.onRequestClose && this.props.onRequestClose();

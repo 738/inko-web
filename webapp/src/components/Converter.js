@@ -5,6 +5,7 @@ import arrow from '../assets/arrow.svg';
 import erase from '../assets/erase.svg';
 import clipboard_copy from '../assets/clipboard_copy.svg';
 import Toast from './Toast';
+import isMobile from 'ismobilejs';
 
 
 const Container = styled.div`
@@ -174,7 +175,9 @@ class Converter extends React.Component {
                 <TextAreaContainer>
                     <Label>{this.state.isEn2koMode ? KOREAN : ENGLISH}</Label>
                     <TextArea value={this.state.afterTextValue} readOnly />
-                    <Paste src={clipboard_copy} onClick={this.onCopyButtonClicked.bind(this)} />
+                    {!(isMobile.phone || isMobile.tablet) &&
+                        <Paste src={clipboard_copy} onClick={this.onCopyButtonClicked.bind(this)} />
+                    }
                 </TextAreaContainer>
                 <Toast
                     isOpen={this.state.isToastOpen}

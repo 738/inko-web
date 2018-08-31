@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "inko": "^1.0.6",
+    "ismobilejs": "^0.4.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.4",
