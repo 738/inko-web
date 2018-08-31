@@ -3,6 +3,8 @@ import Inko from 'inko';
 import styled from 'styled-components';
 import arrow from '../assets/arrow.svg';
 import erase from '../assets/erase.svg';
+import clipboard_copy from '../assets/clipboard_copy.svg';
+import Toast from './Toast';
 
 
 const Container = styled.div`
@@ -75,10 +77,20 @@ const Erase = styled.img`
     cursor: pointer;
 `;
 
+const Paste = styled.img`
+    margin: 0px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 20px;
+`;
+
 const DEFAULT_ENGLISH = 'dkssudgktpdy!';
 const DEFAULT_KOREAN = '안녕하세요!';
 const ENGLISH = '영어';
 const KOREAN = '한글';
+const MESSAGE_COPY = 'Copied!';
 
 class Converter extends React.Component {
     constructor() {
@@ -87,6 +99,7 @@ class Converter extends React.Component {
             beforeTextValue: DEFAULT_ENGLISH,
             afterTextValue: DEFAULT_KOREAN,
             isEn2koMode: true,
+            isToastOpen: false,
         }
         this._inko = new Inko();
     }
@@ -108,6 +121,32 @@ class Converter extends React.Component {
         });
     }
 
+    onCopyButtonClicked() {
+        if (this.state.isToastOpen) return;
+        this.copyToClipboard(this.state.afterTextValue);
+        this.setState({
+            ...this.state,
+            isToastOpen: true,
+        });
+    }
+
+    onToastClosed() {
+        this.setState({
+            ...this.state,
+            isToastOpen: false,
+        });
+    }
+
+    // 클립보드에 텍스트 복사하는 함수
+    copyToClipboard(text) {
+        let textField = document.createElement('textarea');
+        textField.innerText = text;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+    }
+
     onArrowButtonClicked() {
         const value = this.state.afterTextValue;
         const isEn2koModeToggled = !this.state.isEn2koMode;
@@ -123,15 +162,21 @@ class Converter extends React.Component {
         return (
             <Container>
                 <TextAreaContainer>
-                    <Label>{ this.state.isEn2koMode ? ENGLISH : KOREAN }</Label>
+                    <Label>{this.state.isEn2koMode ? ENGLISH : KOREAN}</Label>
                     <TextArea value={this.state.beforeTextValue} onChange={this.onBeforeTextValueChanged.bind(this)} />
                     <Erase src={erase} onClick={this.onEraseButtonClicked.bind(this)} />
                 </TextAreaContainer>
-                <Arrow src={arrow} onClick={this.onArrowButtonClicked.bind(this)}/>
+                <Arrow src={arrow} onClick={this.onArrowButtonClicked.bind(this)} />
                 <TextAreaContainer>
-                    <Label>{ this.state.isEn2koMode ? KOREAN : ENGLISH }</Label>
-                    <TextArea value={this.state.afterTextValue} readOnly/>
+                    <Label>{this.state.isEn2koMode ? KOREAN : ENGLISH}</Label>
+                    <TextArea value={this.state.afterTextValue} readOnly />
+                    <Paste src={clipboard_copy} onClick={this.onCopyButtonClicked.bind(this)} />
                 </TextAreaContainer>
+                <Toast
+                    isOpen={this.state.isToastOpen}
+                    message={MESSAGE_COPY}
+                    autoHideDuration={3000}
+                    onRequestClose={this.onToastClosed.bind(this)} />
             </Container>
         );
     }
