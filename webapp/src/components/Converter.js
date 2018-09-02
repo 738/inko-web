@@ -117,7 +117,7 @@ class Converter extends React.Component {
         this.state = {
             beforeTextValue: beforeTextValue || DEFAULT_ENGLISH,
             afterTextValue: afterTextValue || DEFAULT_KOREAN,
-            isEn2koMode: isEn2koMode || true,
+            isEn2koMode: isEn2koMode !== undefined ? isEn2koMode : true,
             isToastOpen: false,
         }
     }
