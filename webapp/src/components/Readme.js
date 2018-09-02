@@ -19,17 +19,18 @@ const Contents = styled.div`
     }
 `;
 
-const H1 = styled.div`
+const H1 = styled.h1`
     color: #F8AF46;
     font-size: 36px;
     margin: 40px 0px;
     font-family: 'Anton', sans-serif;
+    font-weight: normal;
     @media (max-width: 700px) {
         font-size: 32px;
     }
 `;
 
-const H1_2 = styled.div`
+const H1_2 = styled.h1`
     font-size: 36px;
     margin: 60px 0px 40px;
     font-weight: bold;
@@ -38,27 +39,30 @@ const H1_2 = styled.div`
     }
 `;
 
-const H2 = styled.div`
+const H2 = styled.h2`
     color: #212121;
     font-size: 28px;
     margin: 30px 0px;
+    font-weight: normal;
     @media (max-width: 700px) {
         font-size: 24px;
     }
 `;
 
-const H3 = styled.div`
+const H3 = styled.h3`
     color: #212121;
     font-size: 22px;
     margin: 30px 0px;
+    font-weight: normal;
     @media (max-width: 700px) {
         font-size: 18px;
     }
 `;
 
-const P = styled.div`
+const P = styled.p`
     font-size: 18px;
     margin: 20px 0px;
+    font-weight: normal;
     @media (max-width: 700px) {
         font-size: 16px;
     }
