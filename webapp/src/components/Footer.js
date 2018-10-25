@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import holykiwi_logo from '../assets/holykiwi_logo.svg';
+import holykiwi_logo from '../assets/holykiwi_logo.png';
 
 const Container = styled.div`
     margin-top: 50px;
@@ -16,12 +16,14 @@ const Container = styled.div`
     }
 `;
 
-const HolyKiwi = styled.img`
-    height: 50px;
+const Power = styled.div`
+    display: flex;
+    align-items: center;
 `;
 
-const Power = styled.div`
-
+const HolyKiwiLogo = styled.img`
+    height: 40px;
+    margin-bottom: 12px;
 `;
 
 const Person = styled.a`
@@ -34,7 +36,7 @@ class Footer extends React.Component {
     render() {
         return (
             <Container>
-                <HolyKiwi src={holykiwi_logo} />
+                <HolyKiwiLogo src={holykiwi_logo} />
                 <Power>Powered by 🥝 Holy Kiwi (<Person href="https://github.com/JonJee" target="_blank" rel="noopener noreferrer">@JonJee 🇰🇷</Person>)</Power>
             </Container>
         );
