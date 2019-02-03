@@ -1,4 +1,4 @@
-# inko-web
+# inko.js Official Website
 
 ## This is [Inko](https://inko.holy.kiwi) Official Website.
 
