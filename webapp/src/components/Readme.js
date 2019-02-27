@@ -103,15 +103,15 @@ class Readme extends React.Component {
                 <Contents>
                     <BadgeContainer>
                         <Badge src="https://img.shields.io/teamcity/codebetter/bt428.svg" />
-                        <a href="https://github.com/jonjee/inko" target="_blank" rel="noopener noreferrer">
-                            <Badge src={`https://img.shields.io/github/stars/jonjee/inko.svg?style=social&label=Stars`} />
+                        <a href="https://github.com/738/inko" target="_blank" rel="noopener noreferrer">
+                            <Badge src={`https://img.shields.io/github/stars/738/inko.svg?style=social&label=Stars`} />
                         </a>
                         <a href="https://npmjs.com/package/inko" target="_blank" rel="noopener noreferrer">
                             <Badge src="https://img.shields.io/npm/v/inko.svg" alt="version" />
                         </a>
                         <Badge src={badge_download} />
-                        <a href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
-                            <Badge src="https://img.shields.io/github/license/jonjee/inko.svg" />
+                        <a href="https://github.com/738/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+                            <Badge src="https://img.shields.io/github/license/738/inko.svg" />
                         </a>
                     </BadgeContainer>
                     <H1>Getting Started</H1>
@@ -201,7 +201,7 @@ class Readme extends React.Component {
 
                     <H2>License</H2>
 
-                    <P>inko.js and inko-cli are released under the MIT License. See <A href="https://github.com/jonjee/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</A> file for details.</P>
+                    <P>inko.js and inko-cli are released under the MIT License. See <A href="https://github.com/738/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</A> file for details.</P>
                 </Contents>
             </Container>
         );

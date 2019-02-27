@@ -37,7 +37,7 @@ class Footer extends React.Component {
         return (
             <Container>
                 <HolyKiwiLogo src={holykiwi_logo} />
-                <Power>Powered by 🥝 Holy Kiwi (<Person href="https://github.com/JonJee" target="_blank" rel="noopener noreferrer">@JonJee 🇰🇷</Person>)</Power>
+                <Power>Powered by 🥝 Holy Kiwi (<Person href="https://github.com/738" target="_blank" rel="noopener noreferrer">@JonJee 🇰🇷</Person>)</Power>
             </Container>
         );
     }
