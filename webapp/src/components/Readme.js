@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
-import badge_download from '../assets/badge_download.svg';
 
 const Container = styled.div`
     padding-top: 50px;
@@ -102,14 +101,18 @@ class Readme extends React.Component {
             <Container>
                 <Contents>
                     <BadgeContainer>
-                        <Badge src="https://img.shields.io/teamcity/codebetter/bt428.svg" />
+                        <a href="https://circleci.com/gh/738/inko/tree/master" target="_blank" rel="noopener noreferrer">
+                            <Badge src="https://circleci.com/gh/738/inko/tree/master.svg?style=svg" />
+                        </a>
                         <a href="https://github.com/738/inko" target="_blank" rel="noopener noreferrer">
                             <Badge src={`https://img.shields.io/github/stars/738/inko.svg?style=social&label=Stars`} />
                         </a>
                         <a href="https://npmjs.com/package/inko" target="_blank" rel="noopener noreferrer">
                             <Badge src="https://img.shields.io/npm/v/inko.svg" alt="version" />
                         </a>
-                        <Badge src={badge_download} />
+                        <a href="https://www.jsdelivr.com/package/npm/inko" target="_blank" rel="noopener noreferrer">
+                            <Badge src="https://data.jsdelivr.com/v1/package/npm/inko/badge" />
+                        </a>
                         <a href="https://github.com/738/inko/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
                             <Badge src="https://img.shields.io/github/license/738/inko.svg" />
                         </a>
@@ -137,7 +140,7 @@ class Readme extends React.Component {
                     <P>CDN</P>
 
                     <Pre className={classNames('prettyprint', 'lang-html')}>
-                        &lt;script src="https://cdn.jsdelivr.net/npm/inko@1.0.6/inko.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="https://cdn.jsdelivr.net/npm/inko@1.1.0/inko.min.js"&gt;&lt;/script&gt;
                     </Pre>
 
                     <P>Bower</P>
@@ -184,16 +187,22 @@ class Readme extends React.Component {
                     <H3>영어 → 한글</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-bsh')}>
-                        $ inko -k "dkssudgktpdy ggg"<br/>
+                        $ inko -k "dkssudgktpdy ggg"<br />
                         안녕하세요 ㅎㅎㅎ
                     </Pre>
 
                     <H3>한글 → 영어</H3>
 
                     <Pre className={classNames('prettyprint', 'lang-bsh')}>
-                        $ inko -e "ㅗ디ㅣㅐ 재깅!"<br/>
+                        $ inko -e "ㅗ디ㅣㅐ 재깅!"<br />
                         hello world!
                     </Pre>
+
+                    <H2>Related</H2>
+
+                    <P><A href="https://github.com/738/inko-cli" target="_blank" rel="noopener noreferrer">inko-cli</A> - Use inko on the command line</P>
+                    <P><A href="https://github.com/738/inko-chrome-extension" target="_blank" rel="noopener noreferrer">inko-chrome-extension</A> - Inko chrome extension</P>
+                    <P><A href="https://github.com/738/alfred-inko" target="_blank" rel="noopener noreferrer">alfred-inko</A> - Alfred 3 workflow to convert misspelled English characters into Korean letters (& vice versa) </P>
 
                     <H2>Contributing</H2>
 
