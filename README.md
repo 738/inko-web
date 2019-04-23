@@ -6,7 +6,8 @@
 * Powered by Holy Kiwi
 
 ## Release Note
-v1.0.1 - 2018.09.01 - [#1](https://github.com/738/inko-web/issues/1) 클립보드에 복사하는 기능 추가, [#3](https://github.com/738/inko-web/issues/3) 쿼리스트링 기능 추가
+* v1.0.1 - 2018.09.01 - [#1](https://github.com/738/inko-web/issues/1) 클립보드에 복사하는 기능 추가, [#3](https://github.com/738/inko-web/issues/3) 쿼리스트링 기능 추가
+* v1.1.0 - 2019.04.23 - [#7](https://github.com/738/inko-web/issues/7) inko@1.1.0 적용, 배지 수정, Related 추가
 
 ## 유용하게 활용하는 법
 
