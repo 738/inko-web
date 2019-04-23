@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "inko": "^1.0.6",
+    "inko": "^1.1.0",
     "ismobilejs": "^0.4.1",
     "query-string": "^6.1.0",
     "react": "^16.4.2",
