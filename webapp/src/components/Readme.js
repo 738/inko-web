@@ -110,6 +110,9 @@ class Readme extends React.Component {
                         <a href="https://npmjs.com/package/inko" target="_blank" rel="noopener noreferrer">
                             <Badge src="https://img.shields.io/npm/v/inko.svg" alt="version" />
                         </a>
+                        <a href="https://npmjs.com/package/inko" target="_blank" rel="noopener noreferrer">
+                          <Badge src="https://img.shields.io/npm/dm/inko.svg?style=flat-square" />
+                        </a>
                         <a href="https://www.jsdelivr.com/package/npm/inko" target="_blank" rel="noopener noreferrer">
                             <Badge src="https://data.jsdelivr.com/v1/package/npm/inko/badge" />
                         </a>
