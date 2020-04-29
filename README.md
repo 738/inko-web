@@ -16,7 +16,3 @@ https://inko.holy.kiwi?e=ehdgoanfrhkqorentksdlakfmrhekfgehfhr
 
 ### 한글은 k 쿼리스트링 사용
 https://inko.holy.kiwi?k=ㅗ디ㅣㅐ재깅
-
-## TODO LIST
-
-- [ ] [inko 크롬 확장프로그램](https://chrome.google.com/webstore/detail/inko-%ED%95%9C%EC%98%81%ED%83%80%EB%B3%80%ED%99%98%EA%B8%B0/bijdbcchfaolmleinaghdbnemmdabbmn?hl=ko) 링크 추가
