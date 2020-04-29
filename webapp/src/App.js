@@ -7,7 +7,7 @@ import Readme from './components/Readme';
 import Footer from './components/Footer';
 
 const SUBTITLE = "Open Source Library, Converting Misspelled English characters into Korean letters (& vice versa)";
-const DESCRIPTION = "It supports Javascript and Command Line Interface (Python is under development)";
+const DESCRIPTION = "It supports Javascript, Python and Command Line Interface";
 
 injectGlobal`
   body {

@@ -206,6 +206,7 @@ class Readme extends React.Component {
                     <P><A href="https://github.com/738/inko-cli" target="_blank" rel="noopener noreferrer">inko-cli</A> - Use inko on the command line</P>
                     <P><A href="https://github.com/738/inko-chrome-extension" target="_blank" rel="noopener noreferrer">inko-chrome-extension</A> - Inko chrome extension</P>
                     <P><A href="https://github.com/738/alfred-inko" target="_blank" rel="noopener noreferrer">alfred-inko</A> - Alfred 3 workflow to convert misspelled English characters into Korean letters (& vice versa) </P>
+                    <P><A href="https://github.com/JackCme/inko.py" target="_blank" rel="noopener noreferrer">inko.py</A> - Python implementation of inko.js</P>
 
                     <H2>Contributing</H2>
 
